@@ -5,12 +5,12 @@ export const productApi = createApi({
   reducerPath: "product-api",
   tagTypes: ["product"],
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://www.cheapshark.com/api/1.0/games?title=starve",
+    baseUrl: "https://www.cheapshark.com/api/1.0/games?title=",
     method: 'GET',
   }),
   endpoints: (builder) => ({
-    GetProducts: builder.query<Array<Products>, number>({
-      query: (id: number) => ``,
+    GetProducts: builder.query<Array<Products>, string>({
+      query: (act: string) => `${act}`,
       providesTags: ["product"],
     
     }),

@@ -15,8 +15,15 @@
 }
 .catalog-product {
   height: 300px;
-  flex-basis: 20%;
+  flex-basis: 18%;
+  padding: 0px 0 0 0px;
+  text-indent: 0;
+  width: 100%;
+  background-size: 100% 95%;
+  margin: 0% 1% 0% 1%;
+  background-repeat: no-repeat;
 }
 .product-title {
-  font-size: 18px;
+  font-size: 32px;
+  color: white;
 }
