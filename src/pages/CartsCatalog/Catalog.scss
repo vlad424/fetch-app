@@ -1,0 +1,22 @@
+.main {
+  height: 100vh;
+}
+
+.main-catalog {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+.menu-catalog-products {
+  margin-top: 2.5vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.catalog-product {
+  height: 300px;
+  flex-basis: 20%;
+}
+.product-title {
+  font-size: 18px;
+}
