@@ -1,4 +1,4 @@
-export interface Products {
+export interface Products extends Like {
   cheapest: string,
   external: string,
   gameID: string,

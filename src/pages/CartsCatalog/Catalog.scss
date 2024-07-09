@@ -14,16 +14,31 @@
   flex-wrap: wrap;
 }
 .catalog-product {
-  height: 300px;
-  flex-basis: 18%;
-  padding: 0px 0 0 0px;
-  text-indent: 0;
+  height: 100px;
+  flex-basis: 30%;
+  margin: 1vh 1vw 1vh 1vw;
+  background-color: #ececec;
+  display: flex;
+  flex-direction: row;
+}
+.product-user-view {
   width: 100%;
-  background-size: 100% 95%;
-  margin: 0% 1% 0% 1%;
-  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .product-title {
-  font-size: 32px;
-  color: white;
+  font-size: 24px;
+  color: black;
+}
+.product-price {
+  display: flex;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+}
+.user-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
