@@ -6,6 +6,7 @@ import './assets/global.scss'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { setupStore } from './lib/store';
+import CartsCatalog from './pages/CartsCatalog/CartsCatalog';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,7 +15,7 @@ const root = ReactDOM.createRoot(
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <>1</>
+    element: <CartsCatalog/>
   }
 ])
 
