@@ -4,7 +4,7 @@ import { productSlice } from "../../../lib/reducer/product.slice";
 import { Link } from "react-router-dom";
 
 const Products = () => {
-  const { pushCurrentProduct, setLike } = productSlice.actions;
+  const { pushCurrentProduct, setLike, deleteProduct } = productSlice.actions;
 
   const dispatch = useAppDispatch();
 
@@ -39,15 +39,28 @@ const Products = () => {
                 </Link>
                 <div className="user-input">
                   <p className="product-price">{product.cheapest}$</p>
-                  <button
-                    onClick={() => dispatch(setLike(product.gameID))}
-                    style={{
-                      color: product.isLiked ? "red" : "black",
-                      fontSize: "32px",
-                    }}
-                  >
-                    {product.isLiked ? "❤" : "♡"}
-                  </button>
+                  <div className="product-buttons">
+                    <button
+                      onClick={() => dispatch(deleteProduct(product.gameID))}
+                      style={{
+                        color: product.isLiked ? "red" : "black",
+                        fontSize: "32px",
+                        cursor: 'pointer'
+                      }}
+                    >
+                      {'🗑'}
+                    </button>{" "}
+                    <button
+                      onClick={() => dispatch(setLike(product.gameID))}
+                      style={{
+                        color: product.isLiked ? "red" : "black",
+                        fontSize: "32px",
+                        cursor: 'pointer'
+                      }}
+                    >
+                      {product.isLiked ? "❤" : "♡"}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

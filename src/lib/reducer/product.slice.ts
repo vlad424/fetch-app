@@ -26,6 +26,11 @@ export const productSlice = createSlice({
     },
     setShow(state) {
       state.showLiked = !state.showLiked
+    },
+    deleteProduct(state, action : PayloadAction<string>) {
+      const indexProduct = (state.products as Array<Products>).findIndex(x => x.gameID === action.payload)
+
+      state.products.splice(indexProduct, 1)
     }
   },
 });
