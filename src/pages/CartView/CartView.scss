@@ -1,0 +1,15 @@
+.main-cart-area {
+  margin-top: 2.5vh;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+
+.cart-area-info {
+  flex-basis: 25%;
+  padding: 1%;
+}
+.cart-area-description {
+  flex-basis: 75%;
+  padding: 1%;
+}

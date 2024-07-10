@@ -1,8 +1,13 @@
 import React from 'react';
 
 import './Header.scss'
+import { useAppDispatch } from '../../../lib/redux';
+import { productSlice } from '../../../lib/reducer/product.slice';
 
 const Header = ({title}: {title: string | null}) => {
+  const dispatch = useAppDispatch()
+  const { setShow } = productSlice.actions
+
   return (
     <header className="header">
       {title ? 
@@ -12,7 +17,7 @@ const Header = ({title}: {title: string | null}) => {
       }
       {!title ? 
         <button className='header-filter-button'
-          onClick={() => console.log(1)}
+          onClick={() => dispatch(setShow())}
         >
           filter
         </button>
