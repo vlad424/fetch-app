@@ -13,11 +13,17 @@ const CartView = () => {
       <Header title={currentProduct.external} />
       <div className="main-cart-area">
         <aside className="cart-area-info">
-          <img src={currentProduct.thumb} alt="" />
-          
+          <img src={currentProduct.thumb} alt="" className='cart-info-image'/>
+          <div className="cart-info-text">
+            <p className='name'>{currentProduct.external}</p>
+            <p className='price'>{currentProduct.cheapest}$</p>
+          </div>
         </aside>
         <aside className="cart-area-description">
-          {currentProduct.external}
+          <p className="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, adipisci nisi officiis mollitia laborum tempora, quibusdam omnis, porro et quod quis doloremque consequatur nesciunt vitae?
+          </p>
+          <p className="gameId">GameID: {currentProduct.gameID}</p>
         </aside>
       </div>
     </main>

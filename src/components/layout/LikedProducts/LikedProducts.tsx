@@ -57,9 +57,12 @@ const LikedProducts = () => {
                   <p className="product-price">{product.cheapest}$</p>
                   <button
                     onClick={() => dispatch(setLike(product.gameID))}
-                    style={{ color: product.isLiked ? "red" : "black" }}
+                    style={{
+                      color: product.isLiked ? "red" : "black",
+                      fontSize: "32px",
+                    }}
                   >
-                    like
+                    {product.isLiked ? "❤" : "♡"}
                   </button>
                 </div>
               </div>

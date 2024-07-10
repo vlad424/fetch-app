@@ -9,7 +9,7 @@ import LikedProducts from "../../components/layout/LikedProducts/LikedProducts";
 import Products from "../../components/layout/Products/Products";
 
 const CartsCatalog = () => {
-  const [keyWord, setKeyWord] = useState("starve");
+  const [keyWord, setKeyWord] = useState("creed");
 
   const { pushProducts }  = productSlice.actions;
   const { data, isLoading } = useGetProductsQuery(keyWord);

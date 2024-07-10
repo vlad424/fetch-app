@@ -8,8 +8,30 @@
 .cart-area-info {
   flex-basis: 25%;
   padding: 1%;
+  height: 82.5vh;
+
+  .cart-info-image {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+  }
+  .cart-info-text {
+    display: flex;
+    flex-direction: column  ;
+    margin-top: 2%;
+    font-size: 20px;
+
+    & > .name {
+      font-weight: 600;
+    }
+  }
 }
 .cart-area-description {
   flex-basis: 75%;
   padding: 1%;
+
+
+  & > .gameId {
+    font-weight: 600;
+  }
 }

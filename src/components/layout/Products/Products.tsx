@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import { useAppDispatch, useAppSelector } from "../../../lib/redux";
 import { productSlice } from "../../../lib/reducer/product.slice";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const { pushCurrentProduct, setLike } = productSlice.actions;
@@ -39,7 +39,15 @@ const Products = () => {
                 </Link>
                 <div className="user-input">
                   <p className="product-price">{product.cheapest}$</p>
-                  <button onClick={() => dispatch(setLike(product.gameID))} style={{color: product.isLiked ? 'red' : 'black'}}>like</button>
+                  <button
+                    onClick={() => dispatch(setLike(product.gameID))}
+                    style={{
+                      color: product.isLiked ? "red" : "black",
+                      fontSize: "32px",
+                    }}
+                  >
+                    {product.isLiked ? "❤" : "♡"}
+                  </button>
                 </div>
               </div>
             </div>
